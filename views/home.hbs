@@ -1,0 +1,33 @@
+<h2>{{user}}</h2>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid" id="login">
+    <h1><a class="navbar-brand">Apple Mart</a></h1>
+    <form class="d-flex" role="search" action="/logout">
+      {{!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> --}}
+      <button class="btn btn-outline-success bg-primary" type="submit"><a href="/logout"
+          style="text-decoration: none; color: aliceblue;">LOGOUT</a></button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    {{#each productitems}}
+    <div class="col-6 col-lg-3 col-md-4  mt-5">
+      <div class="card shadow  bg-body rounded  " style="width: 11rem; ">
+
+        <img src="{{this.image}}" class="card-img-top  " alt="..." style=" width: 60% ;margin-left: 20%; ">
+        <div class="card-body">
+          <h5 class="card-title " style="font-size: 15px;">{{this.cardstitles}}</h5>
+          <p class="card-text ">{{this.discription}}</p>
+          <a href="#" class="btn btn-primary " style="margin-left: 12%; margin-top: 20%;">{{this.button}}</a>
+        </div>
+      </div>
+      </div>
+      {{/each}}
+  </div>
+</div>
+
+
+
+
